@@ -1,1 +1,1 @@
-# AI-SEOS Architecture
+# Architecture

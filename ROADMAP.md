@@ -1,5 +1,1 @@
 # Roadmap
-
-- Foundation
-- Core
-- Memory

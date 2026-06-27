@@ -1,15 +1,27 @@
 export class ServiceRegistry {
   private services = new Map<string, any>();
 
-  register(name: string, instance: any) {
+  register<T>(name: string, instance: T) {
     this.services.set(name, instance);
   }
 
-  resolve<T>(name: string): T {
+  get<T>(name: string): T {
+    const service = this.services.get(name);
+    if (!service) {
+      throw new Error(`Service not found: ${name}`);
+    }
+    return service;
+  }
+
+  getOptional<T>(name: string): T | undefined {
     return this.services.get(name);
   }
 
+  has(name: string): boolean {
+    return this.services.has(name);
+  }
+
   list(): string[] {
-    return [...this.services.keys()];
+    return Array.from(this.services.keys());
   }
 }

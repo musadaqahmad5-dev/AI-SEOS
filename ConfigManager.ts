@@ -1,15 +1,22 @@
 export class ConfigManager {
   private config: Record<string, any> = {};
 
-  load(cfg: Record<string, any>) {
-    this.config = cfg;
+  load(config: Record<string, any>) {
+    this.validate(config);
+    this.config = config;
   }
 
-  get(key: string) {
+  get<T>(key: string): T {
     return this.config[key];
   }
 
   set(key: string, value: any) {
     this.config[key] = value;
+  }
+
+  validate(config: Record<string, any>) {
+    if (!config || typeof config !== "object") {
+      throw new Error("Invalid config object");
+    }
   }
 }

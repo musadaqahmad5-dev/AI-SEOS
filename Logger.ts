@@ -1,15 +1,38 @@
 export enum LogLevel {
-  DEBUG,
-  INFO,
-  WARN,
-  ERROR
+  DEBUG = 0,
+  INFO = 1,
+  WARN = 2,
+  ERROR = 3
 }
 
 export class Logger {
   constructor(private level: LogLevel = LogLevel.INFO) {}
 
-  info(msg: string) { console.log('[INFO]', msg); }
-  debug(msg: string) { console.log('[DEBUG]', msg); }
-  warn(msg: string) { console.warn('[WARN]', msg); }
-  error(msg: string) { console.error('[ERROR]', msg); }
+  private format(level: string, msg: string) {
+    return `[${new Date().toISOString()}] [${level}] ${msg}`;
+  }
+
+  setLevel(level: LogLevel) {
+    this.level = level;
+  }
+
+  debug(msg: string) {
+    if (this.level <= LogLevel.DEBUG)
+      console.log(this.format("DEBUG", msg));
+  }
+
+  info(msg: string) {
+    if (this.level <= LogLevel.INFO)
+      console.log(this.format("INFO", msg));
+  }
+
+  warn(msg: string) {
+    if (this.level <= LogLevel.WARN)
+      console.warn(this.format("WARN", msg));
+  }
+
+  error(msg: string) {
+    if (this.level <= LogLevel.ERROR)
+      console.error(this.format("ERROR", msg));
+  }
 }

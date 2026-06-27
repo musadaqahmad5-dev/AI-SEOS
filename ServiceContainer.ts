@@ -1,17 +1,1 @@
-export class ServiceContainer {
-  private services = new Map<string, any>();
-
-  register<T>(key: string, instance: T) {
-    this.services.set(key, instance);
-  }
-
-  resolve<T>(key: string): T {
-    const service = this.services.get(key);
-    if (!service) throw new Error(`Service not found: ${key}`);
-    return service;
-  }
-
-  has(key: string) {
-    return this.services.has(key);
-  }
-}
+export class ServiceContainer{private s=new Map(); register(k:string,v:any){this.s.set(k,v)} resolve<T>(k:string):T{return this.s.get(k)}}

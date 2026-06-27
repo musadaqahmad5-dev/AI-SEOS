@@ -1,11 +1,1 @@
-export class ConfigManager {
-  private config: Record<string, any> = {};
-
-  load(cfg: Record<string, any>) {
-    this.config = cfg;
-  }
-
-  get(key: string) {
-    return this.config[key];
-  }
-}
+export class ConfigManager{constructor(private c:Record<string,unknown>={}){} get(k:string){return this.c[k]}}

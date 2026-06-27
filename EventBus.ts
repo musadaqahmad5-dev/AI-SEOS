@@ -1,12 +1,1 @@
-export class EventBus {
-  private events = new Map<string, Function[]>();
-
-  subscribe(event: string, handler: Function) {
-    if (!this.events.has(event)) this.events.set(event, []);
-    this.events.get(event)!.push(handler);
-  }
-
-  publish(event: string, payload?: any) {
-    this.events.get(event)?.forEach(fn => fn(payload));
-  }
-}
+type H=(p:any)=>void; export class EventBus{private m=new Map<string,H[]>(); on(e:string,h:H){this.m.set(e,[...(this.m.get(e)||[]),h])} emit(e:string,p:any){(this.m.get(e)||[]).forEach(h=>h(p))}}

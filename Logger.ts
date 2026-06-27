@@ -1,5 +1,1 @@
-export class Logger {
-  info(msg: string) {
-    console.log(`[INFO] ${msg}`);
-  }
-}
+export class Logger{info(m:string){console.log('[INFO]',m)} error(m:string){console.error('[ERR]',m)}}

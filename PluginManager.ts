@@ -1,29 +1,12 @@
-import { IPlugin } from "./IPlugin";
-
 export class PluginManager {
-  private plugins: IPlugin[] = [];
+  private plugins: any[] = [];
 
-  constructor(
-    private container: any,
-    private events: any,
-    private logger: any
-  ) {}
-
-  register(plugin: IPlugin) {
+  register(plugin: any, container?: any) {
     this.plugins.push(plugin);
-    this.logger.info(`Plugin registered: ${plugin.name}`);
-    plugin.install?.({ container: this.container, events: this.events });
+    plugin.install?.({ container });
   }
 
-  enableAll() {
-    this.plugins.forEach(p => p.enable?.());
-  }
-
-  disableAll() {
-    this.plugins.forEach(p => p.disable?.());
-  }
-
-  destroyAll() {
-    this.plugins.forEach(p => p.destroy?.());
+  list() {
+    return this.plugins;
   }
 }

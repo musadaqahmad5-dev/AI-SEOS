@@ -1,0 +1,1 @@
+export class RiskClassifier{classify(){return 'LOW'}}

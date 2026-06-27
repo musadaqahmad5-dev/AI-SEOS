@@ -1,9 +1,1 @@
-export class ForensicAnalyzer {
-  analyze(project: any) {
-    return {
-      issues: [],
-      risks: [],
-      summary: "Basic forensic scan completed"
-    };
-  }
-}
+export class ForensicAnalyzer{analyze(){return {issues:[],evidence:[]}}}

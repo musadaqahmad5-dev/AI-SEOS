@@ -1,0 +1,1 @@
+export class ModuleDetector{detect(files:string[]){return files.filter(f=>f.includes('src'))}}

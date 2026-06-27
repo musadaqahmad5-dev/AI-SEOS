@@ -1,0 +1,1 @@
+export class MemoryStore{private m=new Map<string,unknown>();set(k:string,v:unknown){this.m.set(k,v)}get(k:string){return this.m.get(k)}}

@@ -1,0 +1,1 @@
+export class DNAAnalyzer{analyze(files:string[]){return {name:'AI-SEOS',modules:files}}}

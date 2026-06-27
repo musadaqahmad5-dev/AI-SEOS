@@ -1,2 +1,1 @@
-# Build1 PartB
-Core implementation.
+# Part C

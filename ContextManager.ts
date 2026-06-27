@@ -1,0 +1,1 @@
+export class ContextManager{current(){return {id:'',timestamp:Date.now()}}}

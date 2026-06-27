@@ -1,2 +1,2 @@
-# AI-SEOS E-003
-Production-grade kernel improvements
+# AI-SEOS E-004
+Plugin System + DI + Kernel Bootstrap

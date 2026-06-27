@@ -1,1 +1,1 @@
-import {MemoryStore} from './MemoryStore'; export class MemoryEngine{store=new MemoryStore();}
+export class MemoryEngine {}

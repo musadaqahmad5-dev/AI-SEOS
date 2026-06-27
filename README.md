@@ -1,3 +1,1 @@
-# AI-SEOS
-
-Enterprise AI Engineering Platform.
+# AI-SEOS v0.3.0-alpha

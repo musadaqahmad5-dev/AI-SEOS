@@ -1,8 +1,6 @@
 {
-  "name": "ai-seos",
-  "private": true,
-  "version": "0.1.0",
-  "workspaces": [
-    "packages/*"
-  ]
+  "name":"ai-seos",
+  "private":true,
+  "version":"0.4.0-alpha",
+  "workspaces":["apps/*","packages/*"]
 }

@@ -1,1 +1,7 @@
-export enum EngineState{Created}
+export enum EngineState {
+  CREATED = "CREATED",
+  INITIALIZING = "INITIALIZING",
+  RUNNING = "RUNNING",
+  STOPPED = "STOPPED",
+  ERROR = "ERROR"
+}

@@ -1,1 +1,1 @@
-# AI-SEOS v0.3.0-alpha
+# AI-SEOS E-002 Kernel Implementation

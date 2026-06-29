@@ -1,1 +1,9 @@
-{"name":"ai-seos","version":"0.4.0-alpha"}
+{
+  "name": "ai-seos-mvp",
+  "version": "1.0.0",
+  "main": "cli.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node cli.ts"
+  }
+}

@@ -1,3 +1,13 @@
-# AI-SEOS v0.4.0-alpha
+# AI-SEOS MVP
 
-Intelligence Core foundation.
+## Run
+
+```bash
+node cli.ts ./your-project
+```
+
+## Features
+- Project scanning
+- DNA detection
+- Insight generation
+- Architecture scoring
